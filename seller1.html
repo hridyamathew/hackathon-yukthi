@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller Page - Available Tickets</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #80bcbd;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+
+      .tickets {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .ticket {
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .ticket h2 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+
+      .ticket p {
+        color: #666;
+        margin: 5px 0;
+      }
+
+      .sell-button {
+        display: none;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+      }
+
+      .sell-button:hover {
+        background-color: rgb(17, 5, 53);
+      }
+
+      #bottom-buttons {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Available Tickets</h1>
+      <div class="tickets">
+        <!-- Ticket 1 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-1" />
+          <label for="ticket-1">
+            <h2>Ticket #1</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 2 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-2" />
+          <label for="ticket-2">
+            <h2>Ticket #2</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 3 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-3" />
+          <label for="ticket-3">
+            <h2>Ticket #3</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 4 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-4" />
+          <label for="ticket-4">
+            <h2>Ticket #4</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 5 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-5" />
+          <label for="ticket-5">
+            <h2>Ticket #5</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 6 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-6" />
+          <label for="ticket-6">
+            <h2>Ticket #6</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 7 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-7" />
+          <label for="ticket-7">
+            <h2>Ticket #7</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 8 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-8" />
+          <label for="ticket-8">
+            <h2>Ticket #8</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 9 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-9" />
+          <label for="ticket-9">
+            <h2>Ticket #9</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+        <!-- Ticket 10 -->
+        <div class="ticket">
+          <input type="checkbox" class="ticket-checkbox" id="ticket-10" />
+          <label for="ticket-10">
+            <h2>Ticket #10</h2>
+            <p>Lottery: ABC Lottery</p>
+            <p>Price: $10</p>
+          </label>
+        </div>
+      </div>
+      <div id="bottom-buttons">
+        <a href="seller2.html" style="text-decoration: none"
+          ><button class="sell-button" id="sell-all-button">
+            Sell Selected Tickets
+          </button></a
+        >
+      </div>
+    </div>
+
+    <script>
+      const checkboxes = document.querySelectorAll(".ticket-checkbox");
+      const sellAllButton = document.getElementById("sell-all-button");
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          checkSellAllButton();
+        });
+      });
+
+      function checkSellAllButton() {
+        let atLeastOneChecked = false;
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            atLeastOneChecked = true;
+          }
+        });
+
+        if (atLeastOneChecked) {
+          sellAllButton.style.display = "block";
+        } else {
+          sellAllButton.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

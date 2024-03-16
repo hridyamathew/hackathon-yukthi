@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery Application Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0eaea; /* Background color */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background-color: #ffffff; /* Container background color */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .login-container h2 {
+        margin-bottom: 20px;
+        color: #333333; /* Text color */
+      }
+
+      .login-container input[type="text"],
+      .login-container input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #f4f4f4; /* Input background color */
+        box-sizing: border-box;
+        outline: none;
+      }
+
+      .login-container input[type="submit"] {
+        width: 100%;
+        background-color: #424769; /* Button color */
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-container input[type="submit"]:hover {
+        background-color: #323c53; /* Button color on hover */
+      }
+
+      .login-container .error-message {
+        color: red;
+        margin-top: 20px;
+      }
+
+      .login-container .signup-link {
+        margin-top: 20px;
+        color: #333333; /* Text color */
+        font-size: 14px;
+      }
+
+      .login-container .signup-link a {
+        color: #333333; /* Text color */
+        text-decoration: none;
+      }
+
+      .login-container .signup-link a:hover {
+        text-decoration: underline;
+      }
+      label {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Welcome to Secure Win</h2>
+      <form id="loginForm">
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter your username"
+          required
+        /><br />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <select
+          style="height: 30px; width: 250px"
+          required
+          class="form-select"
+          id="UserType"
+          style="width: 360px; border-color: lightblue"
+        >
+          <option selected disabled>--Select--</option>
+          <option value="buyer">Buyer</option>
+          <option value="seller">Seller</option>
+        </select>
+      </form>
+      <br />
+      <button
+        style="
+          color: white;
+          border-radius: 4px;
+          width: 80px;
+          height: 40px;
+          background-color: rgb(17, 5, 53);
+        "
+        onclick="login()"
+      >
+        Login
+      </button>
+      <div class="signup-link">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </div>
+    </div>
+
+    <script>
+      function login() {
+        var userType = document.getElementById("UserType").value;
+        if (userType === "buyer") {
+          window.location.href = "buyer.html";
+        } else if (userType === "seller") {
+          window.location.href = "seller.html";
+        }
+      }
+    </script>
+  </body>
+</html>

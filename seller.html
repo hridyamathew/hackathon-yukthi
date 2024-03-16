@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        #header {
+            background-color: #333;
+            color: #e4e0e0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .lott{
+            color: #e4e0e0;
+        }
+      
+        #header div {
+            display: flex;
+            align-items: center;
+        }
+        
+        #header div h1 {
+            margin-left: 10px;
+        }
+        
+        #content {
+            padding: 20px;
+        }
+        
+        .lottery-section {
+            margin-bottom: 20px;
+        }
+        
+        .lottery-section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .flip-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .flip-card {
+            background-color: white;
+            width: 120px;
+            height: 120px;
+            perspective: 1000px;
+            margin: 10px;
+        }
+        
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front,
+        .flip-card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .flip-card-front {
+            background-color: rgb(17, 5, 53);
+        }
+        
+        .flip-card-back {
+            background-color: #e6dbdb;
+            color: #000000;
+            transform: rotateY(180deg);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div style="display:flex; justify-content:right">
+        <div >
+           <a href="profile.html" style="text-decoration: none;"><button style="width: 100px;height:30px; border-radius: 3px;background-color: rgb(17, 5, 53);color: white;">Go to profile</button></a> 
+        </div>
+        </div>
+        <div class="lottery-section" style="padding-top: 50px;">
+            <h1>Weekly Lotteries</h1>
+            <div class="row">
+                <div class="col-2">
+
+            
+            <div class="flip-card-container">
+                <a href="seller1.html">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">KARUNYA</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3>RS.70</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">WIN WIN</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html" style="text-decoration: none;"><h3>RS.70</h3></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">FIFTY 50</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html" style="text-decoration: none;"><h3 >RS.40</h3></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">STHREE<BR>SAKTHI</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >RS.50</h3></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">KARUNYA +</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >RS.60</h3></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">AKSHAYA</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >RS.70</h3></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">NIRMAL</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >RS.50</h3></a>
+                        </div>
+                    </div>
+                </div>
+           
+                <!-- Repeat the flip-card for other weekly lotteries -->
+            </div>
+        </div>
+    </div>
+        <div class="lottery-section">
+            <h1>Bumper Lotteries</h1>
+            <DIV class="row">
+                <div class="col-3">
+
+               
+            <div class="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">ONAM <Br>BUMPER</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >Rs.600</h3></a>
+                        </div>
+                    </div>
+                </div>
+                      
+            <div class="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott">VISHU <BR>BUMPER </h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >RS.500</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            
+            <div class="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 class="lott"> XMAS<BR>BUMPER </h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 >RS.300</h3></a>
+                        </div>
+                    </div>
+                </div>
+                      
+            <div class="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a href="seller1.html"style="text-decoration: none;"><h3 class="lott">NEWYEAR<BR>BUMPER </h3></a>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 >RS.250</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the flip-card for other bumper lotteries -->
+            </div>
+        </DIV>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

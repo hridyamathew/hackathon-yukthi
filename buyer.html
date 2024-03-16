@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyer Page - Lottery Tickets</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .section {
+        flex-basis: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .section h2 {
+        margin: 0;
+        padding: 15px;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        background-color: rgb(15, 7, 53);
+        color: #fff;
+      }
+
+      .ticket-container {
+        display: none;
+        padding: 15px;
+      }
+
+      .ticket {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .ticket:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .ticket h3 {
+        margin-top: 0;
+        color: #007bff;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+      }
+
+      .ticket p {
+        margin: 5px 0;
+        color: #666;
+      }
+
+      .no-tickets {
+        font-size: 18px;
+        color: #666;
+        text-align: center;
+        margin-top: 20px;
+        flex-basis: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section" id="upcoming-section">
+        <h2 onclick="toggleTickets('upcoming')">Upcoming</h2>
+        <div class="ticket-container" id="upcoming-tickets">
+          <!-- Upcoming Tickets will be inserted here -->
+        </div>
+      </div>
+
+      <div class="section" id="completed-section">
+        <h2 onclick="toggleTickets('completed')">Completed</h2>
+        <div class="ticket-container" id="completed-tickets">
+          <!-- Completed Tickets will be inserted here -->
+        </div>
+      </div>
+
+      <div class="section" id="ongoing-section">
+        <h2 onclick="toggleTickets('ongoing')">Ongoing</h2>
+        <div class="ticket-container" id="ongoing-tickets">
+          <!-- Ongoing Tickets will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Display message if no tickets are purchased -->
+    <div class="no-tickets" id="no-tickets">
+      You haven't purchased any tickets yet!
+    </div>
+
+    <script>
+      function toggleTickets(section) {
+        const sections = document.querySelectorAll(".section");
+        const noTicketsMessage = document.getElementById("no-tickets");
+
+        // Hide all ticket containers
+        document.querySelectorAll(".ticket-container").forEach((container) => {
+          container.style.display = "none";
+        });
+
+        // Show the ticket container for the selected section
+        const ticketContainer = document.getElementById(
+          $,
+          { section } - tickets
+        );
+        if (ticketContainer) {
+          ticketContainer.style.display = "block";
+          noTicketsMessage.style.display = "none";
+        } else {
+          noTicketsMessage.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

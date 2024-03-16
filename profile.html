@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #80bcbd;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        /* Initially hide the profile */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        z-index: 9999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile {
+        padding: 20px;
+      }
+
+      .profile h1 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .profile p {
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .profile .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .profile .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .profile .avatar img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <nav>
+      <ul>
+        <li><a href="#" onclick="toggleProfile()">Profile</a></li>
+        
+      </ul>
+    </nav> -->
+
+    <div class="container" id="profileContainer">
+      <div class="profile">
+        <h1>User Profile</h1>
+        <div class="info">
+          <div class="avatar">
+            <img
+              src="https://img.icons8.com/?size=80&id=i8lSsuxCiBpH&format=png"
+              alt="Profile Picture"
+            />
+          </div>
+          <div class="details">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Location:</strong> Aluva ,Ernakulam</p>
+            <p><strong>Agent number:</strong> KL5535353575</p>
+            <p><strong>Agent Expiration:</strong>13/05/2025</p>
+            <p><strong>License Renewal Date:</strong>13/06/2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
+      function toggleProfile() {
+        var profileContainer = document.getElementById("profileContainer");
+        if (profileContainer.style.display === "none") {
+          profileContainer.style.display = "block";
+        } else {
+          profileContainer.style.display = "none";
+        }
+      }
+    </script> -->
+  </body>
+</html>
